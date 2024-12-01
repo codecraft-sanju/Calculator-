@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="calculator-container">
+        <div class="theme-toggle">
+            <select id="theme-selector">
+                <option value="light">Light Theme</option>
+                <option value="dark">Dark Theme</option>
+                <option value="blue">Blue Theme</option>
+            </select>
+        </div>
+        <div class="calculator">
+            <div class="display">
+                <input type="text" id="result" readonly>
+            </div>
+            <div class="history">
+                <h4>History:</h4>
+                <ul id="history-list"></ul>
+            </div>
+            <div class="buttons">
+                <button onclick="clearDisplay()">C</button>
+                <button onclick="backspace()">←</button>
+                <button onclick="addOperator('%')">%</button>
+                <button onclick="addOperator('/')">÷</button>
+
+                <button onclick="appendNumber('7')">7</button>
+                <button onclick="appendNumber('8')">8</button>
+                <button onclick="appendNumber('9')">9</button>
+                <button onclick="addOperator('*')">×</button>
+
+                <button onclick="appendNumber('4')">4</button>
+                <button onclick="appendNumber('5')">5</button>
+                <button onclick="appendNumber('6')">6</button>
+                <button onclick="addOperator('-')">−</button>
+
+                <button onclick="appendNumber('1')">1</button>
+                <button onclick="appendNumber('2')">2</button>
+                <button onclick="appendNumber('3')">3</button>
+                <button onclick="addOperator('+')">+</button>
+
+                <button onclick="appendNumber('0')">0</button>
+                <button onclick="appendNumber('.')">.</button>
+                <button onclick="calculate()">=</button>
+
+                <button onclick="toggleScientific()">Scientific</button>
+            </div>
+            <div class="scientific-buttons" id="scientific">
+                <button onclick="addFunction('Math.sin')">sin</button>
+                <button onclick="addFunction('Math.cos')">cos</button>
+                <button onclick="addFunction('Math.tan')">tan</button>
+                <button onclick="addFunction('Math.log')">log</button>
+                <button onclick="addFunction('Math.exp')">exp</button>
+                <button onclick="calculateFactorial()">n!</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

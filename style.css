@@ -1,0 +1,172 @@
+/* Root variables for themes */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --btn-color: #f3f3f3;
+  --operator-color: #ffa726;
+  --btn-hover: #e0e0e0;
+}
+
+/* Dark Theme */
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --btn-color: #1e1e1e;
+  --operator-color: #ff5722;
+  --btn-hover: #333333;
+}
+
+/* Blue Theme */
+[data-theme="blue"] {
+  --bg-color: #e3f2fd;
+  --text-color: #0d47a1;
+  --btn-color: #bbdefb;
+  --operator-color: #1976d2;
+  --btn-hover: #90caf9;
+}
+
+/* Global Styles */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Calculator Container */
+.calculator-container {
+  width: 90%;
+  max-width: 400px;
+}
+
+/* Theme Selector */
+.theme-toggle {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.theme-toggle select {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid var(--operator-color);
+  background: var(--btn-color);
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Calculator Styles */
+.calculator {
+  background: var(--btn-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.display {
+  margin-bottom: 15px;
+}
+
+.display input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--btn-hover);
+  text-align: right;
+  color: var(--text-color);
+}
+
+/* History Section */
+.history {
+  margin-bottom: 10px;
+  background: var(--btn-hover);
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 100px;
+  overflow-y: auto;
+}
+
+.history h4 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.history ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history ul li {
+  font-size: 0.9rem;
+  margin: 5px 0;
+}
+
+/* Buttons Grid */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.scientific-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+  display: none; /* Hidden initially */
+}
+
+/* Button Styles */
+button {
+  font-size: 1.2rem;
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--btn-color);
+  color: var(--text-color);
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--btn-hover);
+}
+
+/* Operator Buttons */
+button.operator {
+  background-color: var(--operator-color);
+  color: #ffffff;
+}
+
+button.operator:hover {
+  background-color: var(--operator-color);
+  opacity: 0.8;
+}
+
+/* Equal Button */
+button.equal {
+  background-color: #4caf50;
+  color: #ffffff;
+  grid-column: span 2;
+}
+
+button.equal:hover {
+  background-color: #45a049;
+}
+
+/* Scientific Toggle */
+button.scientific {
+  background-color: #9c27b0;
+  color: #ffffff;
+}
+
+button.scientific:hover {
+  background-color: #8e24aa;
+}
